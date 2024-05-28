@@ -21,10 +21,10 @@ export default function App() {
       <Button
         title='Pesos MXN'
         onPress={() => {
-          let pesosMXN = dolar * 0.060;
+          let pesosMXN = dolar * 16.66;
           let moneda = " Pesos MXN";
-          setTipoCambio(0.060);
-          setSalida(pesosMXN + moneda);
+          setTipoCambio(16.66);
+          setSalida(pesosMXN.toFixed(2) + moneda);
         }}
       />
       <Button
@@ -32,7 +32,7 @@ export default function App() {
         onPress={() => {
           let pesosCOP = dolar * 3869.99;
           setTipoCambio(3869.99);
-          setSalida(pesosCOP + " Pesos COP");
+          setSalida(pesosCOP.toFixed(2) + " Pesos COP");
         }}
       />
       <Button
@@ -40,7 +40,7 @@ export default function App() {
         onPress={() => {
           let euros = dolar * 0.92;
           setTipoCambio(0.92);
-          setSalida(euros + " Euros");
+          setSalida(euros.toFixed(2) + " Euros");
         }}
       />
       <StatusBar style="auto" />
